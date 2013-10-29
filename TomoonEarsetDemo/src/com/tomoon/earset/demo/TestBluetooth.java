@@ -56,8 +56,7 @@ public class TestBluetooth extends Activity {
         mAudioManager.registerMediaButtonEventReceiver(mKeyeventResponder); 
         
         // 播放一段空白音频，按键为播放暂停，上下键为上一曲，下一曲, 如果不播放，上下按键为音量大小
-        int MP3_TO_PLAY = R.raw.silent;
-		mMediaPlayer = MediaPlayer.create (this, MP3_TO_PLAY);	 //设置音频源
+		mMediaPlayer = MediaPlayer.create (this, R.raw.silent);	 //设置音频源
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);//设置流类型
         mMediaPlayer.setLooping(true);	 //设置是否循环播放
         mMediaPlayer.start();	 //开始播放
